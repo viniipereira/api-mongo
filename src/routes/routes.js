@@ -15,9 +15,12 @@ const router = express.Router();
 
 
 router.get('/usuarios',usuarioController.listarUsuarios);
+router.get('/usuario/:id', usuarioController.listarUsuarioPorId);
+
 router.post('/novoUsuario', usuarioController.cadastrarUsuario);
-router.get('/usuario/:id', usuarioController.listarUsuarioPorId)
-router.delete('/usuario/:id',usuarioController.excluirUsuario)
-router.put('/usuario/:id',usuarioController.atualizarUsuario)
+
+router.delete('/usuario/:id',usuarioController.excluirUsuario);
+
+router.put('/usuario/:id',usuarioController.atualizarUsuario);
 
 module.exports = router;
